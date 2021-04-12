@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/CheckoutMenuFragment">
+
+    <fragment
+        android:id="@+id/CheckoutMenuFragment"
+        android:name="com.example.checkout.CheckoutMenuFragment"
+        android:label="Checkout Menu"
+        tools:layout="@layout/fragment_checkout_menu">
+
+        <action
+            android:id="@+id/action_CheckoutMenuFragment_to_CardFormFragment"
+            app:destination="@id/CardFormFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/CardFormFragment"
+        android:name="com.example.checkout.CardFormFragment"
+        android:label="Card Form"
+        tools:layout="@layout/fragment_card_form">
+
+        <action
+            android:id="@+id/action_CardFormFragment_to_CheckoutMenuFragment"
+            app:destination="@id/CheckoutMenuFragment" />
+    </fragment>
+
+</navigation>
